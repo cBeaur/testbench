@@ -9,9 +9,5 @@ def hello_world():
 
 @app.route('/users', methods=['GET'])
 def get_users():
-    users = {
-        0: "John Doe",
-        1: "Mark Hamill",
-        2: "Michael Jordan",
-    }
-    return render_template('index.html', users=users)
+    users = ["John Doe", "Mark Hamill", "Michael Jordan"]
+    return render_template('users.html', users=users)
